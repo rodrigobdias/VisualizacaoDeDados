@@ -2,11 +2,17 @@ import matplotlib.pyplot as plt
 
 from random_walk import RandomWalk
 
-# Cria um passeio aleatório e plota os pontos
-rw = RandomWalk()
+# Continua Criando novos passeios enquanto o programa estiver ativo
+while True:
+    # Cria um passeio aleatório e plota os pontos
+    rw = RandomWalk()
 
-rw.fill_walk()
+    rw.fill_walk()
 
-plt.scatter(rw.x_values, rw.y_values, s = 15)
+    plt.scatter(rw.x_values, rw.y_values, s = 15)
 
-plt.show()
+    plt.show()
+
+    keep_running = input("Make another walk? (y/n):")
+    if keep_running == 'n':
+        break
