@@ -9,6 +9,9 @@ while True:
 
     rw.fill_walk()
 
+    # Define o tamanho da janela de plotagem
+    plt.figure(dpi=128, figsize=(10,6))
+
     # Plota os pontos e mostra o gráfico
     point_numbers = list(range(rw.num_points))
 
