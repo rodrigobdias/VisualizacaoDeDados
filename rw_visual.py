@@ -5,10 +5,11 @@ from random_walk import RandomWalk
 # Continua Criando novos passeios enquanto o programa estiver ativo
 while True:
     # Cria um passeio aleatório e plota os pontos
-    rw = RandomWalk()
+    rw = RandomWalk(50000)
 
     rw.fill_walk()
 
+    # Plota os pontos e mostra o gráfico
     point_numbers = list(range(rw.num_points))
 
     plt.scatter(rw.x_values,
@@ -16,7 +17,7 @@ while True:
                 c=point_numbers,
                 cmap=plt.cm.Blues,
                 edgecolors='none',
-                s = 15)
+                s = 1)
 
     # Remover os eixos
     plt.axes().get_xaxis().set_visible(False)
