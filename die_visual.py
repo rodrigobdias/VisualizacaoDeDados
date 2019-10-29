@@ -6,8 +6,16 @@ die = Die()
 # Faz alguns lançamentos e armazena os resultados em uma lista
 results = []
 
-for _ in range(100):
+for _ in range(1000):
     result = die.roll()
     results.append(result)
 
-print(results)
+#Analisa os resultados
+frequencies = []
+
+for value in range(1, die.num_sides + 1):
+    frequency = results.count(value)
+    frequencies.append(frequency)
+
+
+print(frequencies)
