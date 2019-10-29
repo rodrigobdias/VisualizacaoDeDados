@@ -11,4 +11,3 @@ class Die():
         """Devolve um valor aleatório entre 1 e o número de lados."""
         return randint(1, self._num_sides)
 
-    
